@@ -70,7 +70,7 @@ export default function About() {
                   style={{
                     transform: `
                       rotateY(${angle}deg)
-                      translateZ(180px)
+                      translateZ(220px)
                       translate(-50%, -50%)
                     `,
                   }}
