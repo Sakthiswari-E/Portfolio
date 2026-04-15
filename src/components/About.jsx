@@ -70,12 +70,12 @@ export default function About() {
                   style={{
                     transform: `
                       rotateY(${angle}deg)
-                      translateZ(220px)
-                      translate(-50%, -50%)
+                      translateZ(230px)
+                      translate(-20%, -20%)
                     `,
                   }}
                 >
-                  <Icon className={`${item.color} text-[70px] sm:text-[100px] md:text-[120px]`} />
+                  <Icon className={`${item.color} text-[70px] sm:text-[100px] md:text-[170px]`} />
                 </div>
               );
             })}
