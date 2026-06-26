@@ -10,18 +10,18 @@ export default function Projects() {
       github: "https://github.com/Sakthiswari-E/Personal-Finance-Manager-Frontend",
     },
     {
+      title: "Pixora Digital",
+      desc: "Developed a real-world business website for Pixora Digital, providing professional video editing services for social media content",
+      tech: "Frontend, backend",
+      live: "https://pixora-digital.netlify.app/",
+      github: "https://github.com/Sakthiswari-E/Pixora-Frontend",
+    },
+    {
       title: "Expense Tracker",
       desc: "Track income and expenses with filters and local storage support",
       tech: "React, Frontend",
       live: "https://smartexpensetrackerrr.netlify.app/",
       github: "https://github.com/Sakthiswari-E/smart-expense-tracker",
-    },
-    {
-      title: "Invoice Builder",
-      desc: "Create and download professional invoices dynamically",
-      tech: "Frontend, React",
-      live: "https://invoicebuilder1.netlify.app/",
-      github: "https://github.com/Sakthiswari-E/Invoice-Builder",
     },
     {
       title: "Movie Search App",
@@ -64,71 +64,71 @@ export default function Projects() {
 
         {projects.map((p, i) => (
           <motion.div
-  key={i}
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ delay: i * 0.15 }}
-  whileHover={{ scale: 1.05, y: -10 }}
-  onMouseMove={(e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    e.currentTarget.style.setProperty(
-      "--x",
-      `${e.clientX - rect.left}px`
-    );
-    e.currentTarget.style.setProperty(
-      "--y",
-      `${e.clientY - rect.top}px`
-    );
-  }}
-  className="relative bg-white rounded-2xl p-6 shadow-md border border-pink-200 transition overflow-hidden group"
->
-  
-  {/* 🔥 CURSOR GLOW */}
-  <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
-    <div
-      className="absolute w-[300px] h-[300px] bg-pink-400/30 rounded-full blur-3xl"
-      style={{
-        left: "var(--x)",
-        top: "var(--y)",
-        transform: "translate(-50%, -50%)",
-      }}
-    ></div>
-  </div>
+            key={i}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.15 }}
+            whileHover={{ scale: 1.05, y: -10 }}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              e.currentTarget.style.setProperty(
+                "--x",
+                `${e.clientX - rect.left}px`
+              );
+              e.currentTarget.style.setProperty(
+                "--y",
+                `${e.clientY - rect.top}px`
+              );
+            }}
+            className="relative bg-white rounded-2xl p-6 shadow-md border border-pink-200 transition overflow-hidden group"
+          >
 
-  {/* CONTENT */}
-  <div className="relative z-10">
-    <h3 className="text-xl font-bold text-gray-800">
-      {p.title}
-    </h3>
+            {/* 🔥 CURSOR GLOW */}
+            <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
+              <div
+                className="absolute w-[300px] h-[300px] bg-pink-400/30 rounded-full blur-3xl"
+                style={{
+                  left: "var(--x)",
+                  top: "var(--y)",
+                  transform: "translate(-50%, -50%)",
+                }}
+              ></div>
+            </div>
 
-    <p className="text-gray-500 text-sm mt-2">
-      {p.desc}
-    </p>
+            {/* CONTENT */}
+            <div className="relative z-10">
+              <h3 className="text-xl font-bold text-gray-800">
+                {p.title}
+              </h3>
 
-    <p className="text-pink-500 text-xs mt-3 font-medium">
-      {p.tech}
-    </p>
+              <p className="text-gray-500 text-sm mt-2">
+                {p.desc}
+              </p>
 
-    <div className="flex gap-4 mt-5">
-      <a
-        href={p.live}
-        target="_blank"
-        className="text-sm text-pink-600 font-semibold hover:underline"
-      >
-        Live
-      </a>
+              <p className="text-pink-500 text-xs mt-3 font-medium">
+                {p.tech}
+              </p>
 
-      <a
-        href={p.github}
-        target="_blank"
-        className="text-sm text-gray-600 hover:text-pink-600"
-      >
-        GitHub
-      </a>
-    </div>
-  </div>
+              <div className="flex gap-4 mt-5">
+                <a
+                  href={p.live}
+                  target="_blank"
+                  className="text-sm text-pink-600 font-semibold hover:underline"
+                >
+                  Live
+                </a>
 
-</motion.div>
+                <a
+                  href={p.github}
+                  target="_blank"
+                  className="text-sm text-gray-600 hover:text-pink-600"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+          </motion.div>
         ))}
 
       </div>
